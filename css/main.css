@@ -1,6 +1,69 @@
 @charset "utf-8";
+@import url("reset.css");
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.wrap{
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+header{
+    width: 1920px;
+    height: 100px;
+    background-color: #78ACD1;
+    margin: 0 auto;
+    position: fixed;
+}
+.head{
+    width: 1920px;
+    height: 100px;
+    background-color: #78ACD1;
+    position: relative;
+}
+.head .logo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 236px;
+}
+.head .logo img{
+    width: 90px;
+    height: 90px;;
+    position: absolute;
+    top: 5px;
+}
+.head .nav{
+    /* background-color: coral; */
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 236px;
+}
+li{
+    width: calc(500px / 4);
+    height: 100px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 700;
+}
+.main-bg{
+    background: url(../images/visual06.jpg) no-repeat center;
+    width: 100%;
+    height: 930px;
+    background-size: cover;
+}
+.box{
+    width: 496px;
+    height: 352px;
+    background-color: #137AB4;
+    position: absolute;
+    bottom: 0;
+    left: 180px;
 }
