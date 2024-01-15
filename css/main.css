@@ -1,69 +1,263 @@
 @charset "utf-8";
 @import url("reset.css");
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.wrap{
-    width: 1920px;
-    margin: 0 auto;
-    position: relative;
+.wrap {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
 }
-header{
-    width: 1920px;
-    height: 100px;
-    background-color: #78ACD1;
-    margin: 0 auto;
-    position: fixed;
+header {
+  width: 1920px;
+  height: 100px;
+  /* background-color: #78ACD1; */
+  margin: 0 auto;
+  position: fixed;
+  z-index: 99999;
 }
-.head{
-    width: 1920px;
-    height: 100px;
-    background-color: #78ACD1;
-    position: relative;
+.head {
+  width: 1920px;
+  height: 100px;
+  background-color: rgba(120, 172, 209, 0.9);
+  position: relative;
 }
-.head .logo{
-    width: 100px;
-    height: 100px;
+.head .logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 236px;
+}
+.head .logo img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 5px;
+}
+.head .nav {
+  /* background-color: coral; */
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 236px;
+}
+.nav-li {
+  width: calc(500px / 4);
+  height: 100px;
+  float: left;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-weight: 700;
+}
+.img-slide{
+  width: 100%;
+  height: 930px;
+  position: relative;
+}
+.main-bg {
+  background: url(../images/visual06.jpg) no-repeat center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  
+}
+.card {
+  width: 496px;
+  height: 352px;
+  background-color: rgba(19, 122, 180, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+}
+.card h2 {
+  color: #66bbeb;
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  top: 33px;
+  left: 45px;
+}
+.card h2::after{
+    content: "";
+    width: 347px;
+    height: 2px;
+    background-color: #66bbeb;
     position: absolute;
-    top: 0;
-    left: 236px;
+    top: 36px;
+    left: 33.5px;
 }
-.head .logo img{
-    width: 90px;
-    height: 90px;;
-    position: absolute;
-    top: 5px;
+.card h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  position: absolute;
+  top: 89px;
+  left: 45px;
+  line-height: normal;
 }
-.head .nav{
-    /* background-color: coral; */
-    width: 500px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    right: 236px;
+.card p {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  top: 203px;
+  left: 45px;
+  line-height: normal;
 }
-li{
-    width: calc(500px / 4);
-    height: 100px;
-    float: left;
-    text-align: center;
-    line-height: 100px;
+.open{
+    width: 180px;
+    height: 34px;
     color: white;
-    font-weight: 700;
-}
-.main-bg{
-    background: url(../images/visual06.jpg) no-repeat center;
-    width: 100%;
-    height: 930px;
-    background-size: cover;
-}
-.box{
-    width: 496px;
-    height: 352px;
-    background-color: #137AB4;
+    text-align: left;
+    padding: 10px;
+    background-color: #66bbeb;
+    border: none;
+    border-radius: 5px;
     position: absolute;
-    bottom: 0;
-    left: 180px;
+    top: 282px;
+    left: 45px;
+}
+.clubnews{
+    width: 100%;
+    height: 1240px;
+    /* background-color: antiquewhite; */
+}
+.clubnews h1{
+  font-size: 100px;
+  font-weight: 700;
+  text-align: center;
+  padding: 54px;
+}
+.news-box{
+  width: 1561px;
+  height: 940px;
+  border-top: 3px solid #D9D9D9;
+  border-bottom: 3px solid #D9D9D9;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+.main-news{
+  width: 780px;
+  height: 940px;
+  /* border-right: 3px solid #D9D9D9; */
+  position: relative;
+
+}
+.main-news img{
+  width: 700px;
+  height: 668px;
+  position: absolute;
+  top: 45px;
+  left: 40px;
+  object-fit: cover;
+}
+.main-news p{
+  font-size: 13px;
+  font-weight: 500;
+  color: #66bbeb;
+  position: absolute;
+  bottom: 188px;
+  left: 40px;
+}
+.main-news h2{
+  font-size: 28px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 133px;
+  left: 40px;
+}
+.main-news span{
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 53px;
+  left: 40px;
+}
+.sub-news{
+  width: 780px;
+display: flex;
+flex-direction: column;
+
+}
+.sub-news p{
+  color: #66bbeb;
+  font-size: 13px;
+  font-weight: 500;
+  position: absolute;
+  top: 316px;
+  left: 40px;
+}
+.sub-news h2{
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  top: 346px;
+  left: 40px;
+  line-height: normal;
+}
+.sub-news span{
+  font-size: 17px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 42px;
+  left: 40px;
+}
+.sub-top{
+  width: 780px;
+  height: 470px;
+  display: flex;
+  border-bottom: solid 3px #D9D9D9;
+}
+.sub-bottom{
+  width: 780px;
+  height: 470px;
+  display: flex;
+}
+.news-top{
+  width: 390px;
+  height: 470px;
+  border-left: solid 3px #D9D9D9;
+  position: relative;
+}
+.news-top img{
+  width: 310px;
+  height: 250px;
+  position: absolute;
+  top: 43px;
+  left: 40px;
+  object-fit: cover;
+}
+.news-bottom{
+  width: 390px;
+  height: 470px;
+  border-left: solid 3px #D9D9D9;
+  position: relative;
+}
+.news-bottom .news4{
+  width: 310px;
+  height: 250px;
+  position: absolute;
+  top: 43px;
+  left: 40px;
+  object-fit: contain;
+}
+.news-bottom .news5{
+  width: 310px;
+  height: 250px;
+  position: absolute;
+  top: 43px;
+  left: 40px;
+  object-fit: cover;
+  
+}
+.pl-bg{
+  background: url("../images/playerinfo.jpg") no-repeat;
+  width: 1920px;
+  height: 757px;
 }
