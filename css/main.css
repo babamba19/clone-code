@@ -60,7 +60,7 @@ header {
   position: relative;
 }
 .main-bg {
-  background: url(../images/visual06.jpg) no-repeat center;
+  background: url("../images/visual06.jpg") no-repeat center;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -257,21 +257,21 @@ header {
   left: 40px;
   object-fit: cover;
 }
-.player {
+.pl-info {
   background: url("../images/playerinfo.jpg") no-repeat;
   background-size: cover;
   height: 757px;
   position: relative;
 }
-.pl-info {
+.info {
   width: 710px;
   height: 650px;
-/* background-color: chocolate; */
+  /* background-color: chocolate; */
   position: absolute;
   top: 83px;
   right: 200px;
 }
-.pl-info h3 {
+.info h3 {
   font-size: 55px;
   font-weight: 700;
   color: white;
@@ -280,7 +280,7 @@ header {
   height: 80px;
   background-color: #137ab4;
 }
-.pl-info h1 {
+.info h1 {
   font-size: 90px;
   font-weight: 700;
   color: white;
@@ -288,7 +288,7 @@ header {
   top: -5px;
   left: 130px;
 }
-.pl-info p {
+.info p {
   font-size: 20px;
   font-weight: 500;
   color: white;
@@ -297,7 +297,7 @@ header {
   top: 200px;
   left: 130px;
 }
-.pl-info span {
+.info span {
   font-size: 20px;
   font-weight: 700;
   color: #ffe500;
@@ -335,7 +335,7 @@ header {
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
-.infobt-left {
+.pl-info .infobt-left {
   width: 200px;
   height: 40px;
   color: white;
@@ -351,9 +351,8 @@ header {
   position: absolute;
   bottom: 80px;
   right: 570px;
-
 }
-.infobt-right {
+.pl-info .infobt-right {
   width: 200px;
   height: 40px;
   color: white;
@@ -364,18 +363,18 @@ header {
   /* background: url("../images/vis_right.png") no-repeat right; */
   background-size: 10px;
   padding: 10px;
-  background-color: #137AB4;
+  background-color: #137ab4;
   border: none;
   position: absolute;
   bottom: 80px;
   right: 330px;
 }
-.notice{
+.notice {
   background: url("../images/mcont5_bg.jpg");
   height: 794px;
   position: relative;
 }
-.notice-top{
+.notice-top {
   width: 1560px;
   height: 245px;
   /*  background-color: darkgray; */
@@ -383,36 +382,36 @@ header {
   top: 68px;
   left: 180px;
 }
-.nt-left{
+.nt-left {
   width: 295px;
   height: 245px;
   float: left;
 }
-.nt-left h1{
+.nt-left h1 {
   font-size: 50px;
   font-weight: 700;
   color: white;
   margin: 40px 0;
 }
-.nt-left p{
+.nt-left p {
   font-size: 20px;
   font-weight: 400;
   color: white;
   line-height: normal;
 }
-.nt-right{
+.nt-right {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-.nt-right li{
+.nt-right li {
   width: 295px;
   height: 245px;
   background-color: white;
   float: left;
   position: relative;
 }
-.nt-right li .blue{
+.nt-right li .blue {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -425,7 +424,7 @@ header {
   top: 30px;
   left: 90px;
 }
-.nt-right li p{
+.nt-right li p {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -436,9 +435,9 @@ header {
   border: 1px solid #e07900;
   position: absolute;
   top: 30px;
-  left: 90px; 
+  left: 90px;
 }
-.nt-right h2{
+.nt-right h2 {
   width: 210px;
   height: 120px;
   font-size: 20px;
@@ -450,9 +449,185 @@ header {
   top: 67px;
   left: 46px;
 }
-.nt-right span{
+.nt-right span {
   position: absolute;
   bottom: 40px;
   left: 105px;
-
+  color: #a8a8a8;
+}
+.notice-bottom {
+  width: 1560px;
+  height: 320px;
+  /* background-color: crimson; */
+  position: absolute;
+  bottom: 102px;
+  left: 180px;
+}
+.bottom-left {
+  width: 762px;
+  height: 320px;
+  background-color: #c7c7c7;
+  position: relative;
+}
+.bottom-left .ticket {
+  background: url("../images/mcont5_bg01.jpg") no-repeat;
+  width: 252px;
+  height: 318px;
+  background-size: cover;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: white;
+}
+.bottom-left .ticket h1 {
+  font-size: 28px;
+  font-weight: 700;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-left .ticket p {
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-left .schedule {
+  background: url("../images/mcont5_bg02.jpg") no-repeat;
+  width: 252px;
+  height: 318px;
+  background-size: cover;
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+.bottom-left .schedule h1 {
+  font-size: 28px;
+  font-weight: 700;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-left .schedule p {
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-left .players {
+  background: url("../images/mcont5_bg03.jpg") no-repeat;
+  width: 252px;
+  height: 318px;
+  background-size: cover;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  color: white;
+}
+.bottom-left .players h1 {
+  font-size: 28px;
+  font-weight: 700;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-left .players p {
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-right {
+  width: 762px;
+  height: 320px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.stadium {
+  background: url("../images/mcont5_bg05.jpg") no-repeat;
+  width: 762px;
+  height: 320px;
+  background-size: cover;
+  position: relative;
+}
+.stadium h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.stadium-info {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.stadium-info li{
+  width: 200px;
+  height: 120px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.stadium-info li h2{
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  top: 120px;
+}  
+.stadium-info li p{
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 88px;
+  text-align: center;
+  line-height: normal;
+}
+.stadium .stbt-left {
+  width: 164px;
+  height: 38px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 20px;
+  /* background: url("../images/vis_right.png") no-repeat right; */
+  background-size: 10px;
+  padding: 10px;
+  background-color: #6fc0f1;
+  border: none;
+  position: absolute;
+  bottom: 16px;
+  left: 210px;
+}
+.stadium .stbt-right {
+  width: 164px;
+  height: 38px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 20px;
+  /* background: url("../images/vis_right.png") no-repeat right; */
+  background-size: 10px;
+  padding: 10px;
+  background-color: #137ab4;
+  border: none;
+  position: absolute;
+  bottom: 16px;
+  right: 210px;
 }
