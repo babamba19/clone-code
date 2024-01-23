@@ -20,6 +20,12 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
     <title>DAEGU FC</title>
   </head>
@@ -42,18 +48,61 @@
         </div>
       </header>
       <!-- 이미지슬라이드 -->
-      <div class="img-slide">
-        <div class="main-bg"></div>
-        <div class="card">
-          <h2>01</h2>
-          <h1>'공슴도치 리카의 <br />대팍라이프!' 대구FC...</h1>
-          <p>
-            대구FC가 마스코트 리카를 활용한<br />
-            카카오톡 판매용 이모티콘 2탄을...
-          </p>
-          <input type="button" value="Read More" class="bt-open" />
+      <div class="swiper img-slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide1"></div>
+            <div class="card">
+              <h2>01</h2>
+              <h1>대구FC, 2024시즌 유니폼 <br />“Born to Love DAEGU...</h1>
+              <p>
+                대구와 대구FC를 상징하는 팔공산과 <br />
+                엠블럼을 모티브로 한 자카드 패턴
+              </p>
+              <input type="button" value="Read More" class="bt-open" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide2"></div>
+            <div class="card">
+              <h2>02</h2>
+              <h1>'공슴도치 리카의 <br />대팍라이프!' 대구FC...</h1>
+              <p>
+                대구FC가 마스코트 리카를 활용한<br />
+                카카오톡 판매용 이모티콘 2탄을...
+              </p>
+              <input type="button" value="Read More" class="bt-open" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide3"></div>
+            <div class="card">
+              <h2>03</h2>
+              <h1>대구FC 황재원, 2022 <br />항저우 아시안게임...</h1>
+              <p>
+                대구FC 소속 황재원 선수가 2022 항저우<br />
+                아시안게임 남자축구 금메달을...
+              </p>
+              <input type="button" value="Read More" class="bt-open" />
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
+      <script>
+        var swiper = new Swiper(".img-slide", {
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
       <!-- 클럽뉴스 -->
       <div class="clubnews">
         <div class="news-header"><b>CLUB</b>NEWS</div>
@@ -121,35 +170,51 @@
           </ul>
         </div>
       </div>
-      <!-- 선수 소개 -->
+      <!-- 선수 정보 -->
       <div class="pl-info">
-        <div class="info">
-          <h3>17</h3>
-          <h1>GO JAE <br />HYEON</h1>
-          <p>
-            생년월일 : 1999년 03월 05일 전소속 / 출신고 : 대륜고 / 대륜중 <br />
-            신장 / 체중 : 180cm/74kg
-          </p>
-          <span>K LEAGE 통산기록</span>
+        <div class="info-box">
+          <div class="info-box-rigit">
+            <div class="info">
+              <h3>17</h3>
+              <h1>GO JAE <br />HYEON</h1>
+              <p>
+                생년월일 : 1999년 03월 05일 전소속 / 출신고 : 대륜고 / 대륜중
+                <br />
+                신장 / 체중 : 180cm/74kg
+              </p>
+              <span>K LEAGE 통산기록</span>
+            </div>
+            <ul class="pl-st">
+              <li>
+                <p>경기</p>
+                <h1>125</h1>
+              </li>
+              <li>
+                <p>득점</p>
+                <h1>26</h1>
+              </li>
+              <li>
+                <p>도움</p>
+                <h1>6</h1>
+              </li>
+            </ul>
+            <div class="info-bt">
+              <input
+                type="button"
+                value="프로필 상세보기"
+                class="infobt-left"
+              />
+              <input
+                type="button"
+                value="선수단 프로필보기"
+                class="infobt-right"
+              />
+            </div>
+          </div>
         </div>
-        <ul class="pl-st">
-          <li>
-            <p>경기</p>
-            <h1>125</h1>
-          </li>
-          <li>
-            <p>득점</p>
-            <h1>26</h1>
-          </li>
-          <li>
-            <p>도움</p>
-            <h1>6</h1>
-          </li>
-        </ul>
-        <input type="button" value="프로필 상세보기" class="infobt-left" />
-        <input type="button" value="선수단 프로필보기" class="infobt-right" />
       </div>
       <!-- 공지사항 -->
+      <!-- Swiper -->
       <div class="notice">
         <div class="notice-top">
           <div class="nt-left">
@@ -159,104 +224,168 @@
               공지사항입니다
             </p>
           </div>
-          <ul class="nt-right">
-            <li>
-              <p class="blue">공지사항</p>
-              <a href="#">
-                <h2>
-                  대구FC 상상필드 6기 <br />
-                  모집
-                </h2>
-              </a>
-              <span>2024.01.10</span>
-            </li>
-            <li>
-              <p>입찰공고</p>
-              <a href="#">
-                <h2>
-                  2024 대구FC 함께하늘 <br />
-                  디자인 제작 대행 용역 <br />
-                  입찰 공고
-                </h2>
-              </a>
-              <span>2024.01.10</span>
-            </li>
-            <li>
-              <p>입찰공고</p>
-              <a href="#">
-                <h2>
-                  [입찰공고] 2024년 대 <br />
-                  구FC 광고물 위탁제작 <br />
-                  및 관리자 공개모집
-                </h2>
-              </a>
-              <span>2024.01.10</span>
-            </li>
-            <li>
-              <p>입찰공고</p>
-              <a href="#">
-                <h2>
-                  [입찰공고] 2024년 <br />
-                  대구FC 홈경기 및 <br />
-                  사회공헌 운영 대행사...
-                </h2>
-              </a>
-              <span>2024.01.10</span>
-            </li>
-          </ul>
-        </div>
-        <div class="notice-bottom">
-          <div class="bottom-left">
-            <a href="#">
-              <div class="ticket">
-                <h1>TICKET</h1>
-                <p>티켓예매</p>
-              </div>
-            </a>
-            <a href="#">
-              <div class="schedule">
-                <h1>SCHEDULE</h1>
-                <p>경기일정</p>
-              </div>
-            </a>
-            <a href="#">
-              <div class="players">
-                <h1>PLAYERS</h1>
-                <p>선수단</p>
-              </div>
-            </a>
+          <div class="swiper sw-notice">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <p class="blue">공지사항</p>
+                <a href="#">
+                  <h2>
+                    대구FC 상상필드 6기 <br />
+                    모집
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p>입찰공고</p>
+                <a href="#">
+                  <h2>
+                    2024 대구FC 함께하늘 <br />
+                    디자인 제작 대행 용역 <br />
+                    입찰 공고
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p>입찰공고</p>
+                <a href="#">
+                  <h2>
+                    [입찰공고] 2024년 대 <br />
+                    구FC 광고물 위탁제작 <br />
+                    및 관리자 공개모집
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p>입찰공고</p>
+                <a href="#">
+                  <h2>
+                    [입찰공고] 2024년 <br />
+                    대구FC 홈경기 및 <br />
+                    사회공헌 운영 대행사...
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p class="blue">공지사항</p>
+                <a href="#">
+                  <h2>
+                    대구FC 상상필드 6기 <br />
+                    모집
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p>입찰공고</p>
+                <a href="#">
+                  <h2>
+                    2024 대구FC 함께하늘 <br />
+                    디자인 제작 대행 용역 <br />
+                    입찰 공고
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p>입찰공고</p>
+                <a href="#">
+                  <h2>
+                    [입찰공고] 2024년 대 <br />
+                    구FC 광고물 위탁제작 <br />
+                    및 관리자 공개모집
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+              <li class="swiper-slide">
+                <p>입찰공고</p>
+                <a href="#">
+                  <h2>
+                    [입찰공고] 2024년 <br />
+                    대구FC 홈경기 및 <br />
+                    사회공헌 운영 대행사...
+                  </h2>
+                </a>
+                <span>2024.01.10</span>
+              </li>
+            </ul>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="bottom-right">
-            <div class="stadium">
-              <h1>DGB대구은행파크</h1>
-              <ul class="stadium-info">
-                <li>
-                  <h2>7</h2>
-                  <p>
-                    그라운드와 <br />
-                    7m 거리의 관람석
-                  </p>
-                </li>
-                <li>
-                  <h2>7</h2>
-                  <p>
-                    북구청역 도보 7분 <br />
-                    대구역 자차 7분
-                  </p>
-                </li>
-                <li>
-                  <h2>12,000</h2>
-                  <p>
-                    국내 최초 <br />
-                    경량 알루미늄 좌석
-                  </p>
-                </li>
-              </ul>
-              <input type="button" value="좌석 안내" class="stbt-left" />
-              <input type="button" value="주차장 안내" class="stbt-right" />
+          <div class="notice-bottom">
+            <div class="bottom-left">
+              <a href="#">
+                <div class="ticket">
+                  <h1>TICKET</h1>
+                  <p>티켓예매</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="schedule">
+                  <h1>SCHEDULE</h1>
+                  <p>경기일정</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="players">
+                  <h1>PLAYERS</h1>
+                  <p>선수단</p>
+                </div>
+              </a>
+            </div>
+            <div class="bottom-right">
+              <div class="stadium">
+                <h1>DGB대구은행파크</h1>
+                <ul class="stadium-info">
+                  <li>
+                    <h2>7</h2>
+                    <p>
+                      그라운드와 <br />
+                      7m 거리의 관람석
+                    </p>
+                  </li>
+                  <li>
+                    <h2>7</h2>
+                    <p>
+                      북구청역 도보 7분 <br />
+                      대구역 자차 7분
+                    </p>
+                  </li>
+                  <li>
+                    <h2>12,000</h2>
+                    <p>
+                      국내 최초 <br />
+                      경량 알루미늄 좌석
+                    </p>
+                  </li>
+                </ul>
+                <input type="button" value="좌석 안내" class="stbt-left" />
+                <input type="button" value="주차장 안내" class="stbt-right" />
+              </div>
             </div>
           </div>
         </div>
+        <script>
+          var swiper = new Swiper(".sw-notice", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            freeMode: true,
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+          });
+        </script>
       </div>
       <!-- 하단 -->
       <footer>
