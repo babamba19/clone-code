@@ -27,6 +27,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <title>DAEGU FC</title>
   </head>
   <body>
@@ -47,6 +48,7 @@
           </div>
         </div>
       </header>
+
       <!-- 이미지슬라이드 -->
       <div class="swiper img-slide">
         <div class="swiper-wrapper">
@@ -103,6 +105,39 @@
           },
         });
       </script>
+      <!-- 경기 일정 -->
+      <div class="next-match">
+        <div class="match-bg">
+        <div class="match-header">
+          <div class="match-left">
+            <h1><b>NEXT</b>MATCH</h1>
+            <p>
+              대구FC의 2024년 <br />
+              다음경기 일정입니다.
+            </p>
+            <input type="button" value="티켓예매하기" class="bt-ticket" />
+          </div>
+          <ul class="match-right">
+            <li>
+              <img src="/images/dg-logo.png" alt="대구FC" class="daegu-img" />
+              <p class="daegu">대구FC</p>
+            </li>
+            <li>
+              <div class="vs">
+                <h1>vs</h1>
+                <p>2024.03.03(일요일)</p>
+                <h2>14:00</h2>
+                <span>DGB대구은행파크</span>
+              </div>
+            </li>
+            <li>
+              <img src="/images/kc-logo.png" alt="김천상무" class="gimcheon-img"/>
+              <p class="gimcheon">김천상무프로축구단</p>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
       <!-- 클럽뉴스 -->
       <div class="clubnews">
         <div class="news-header"><b>CLUB</b>NEWS</div>
@@ -214,15 +249,18 @@
         </div>
       </div>
       <!-- 공지사항 -->
-      <!-- Swiper -->
       <div class="notice">
         <div class="notice-top">
           <div class="nt-left">
+            <div class="nt-icon"></div>
             <h1>공지사항</h1>
             <p>
               대구시민프로축구단의 <br />
               공지사항입니다
             </p>
+            <button class="notice-next">></button>
+            <button class="notice-prev"><</button>
+            <div class="swiper-pagination"></div>
           </div>
           <div class="swiper sw-notice">
             <ul class="swiper-wrapper">
@@ -313,9 +351,6 @@
                 <span>2024.01.10</span>
               </li>
             </ul>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
           </div>
           <div class="notice-bottom">
             <div class="bottom-left">
@@ -377,8 +412,8 @@
             freeMode: true,
             loop: true,
             navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+              nextEl: ".notice .notice-next",
+              prevEl: ".notice .notice-prev",
             },
             autoplay: {
               delay: 2500,
